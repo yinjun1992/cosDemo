@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  nginx-php7:
+      container_name: cosDemo
+      build:
+        context: .
+        dockerfile: docker/nginx-php7/Dockerfile
+      ports:
+        - 8088:80
+      volumes:
+        - ./:/var/www
+        #- ./docker/nginx-php7/sites:/etc/nginx/conf.d
+      networks:
+        - slim-network
+networks:
+  slim-network:
+    driver: "bridge"
