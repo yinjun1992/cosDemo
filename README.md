@@ -1,6 +1,6 @@
 # cosDemo
-====
--正余弦相似度php demo
+###-正余弦相似度php demo
+---
 ###composer
 ```
 composer install
